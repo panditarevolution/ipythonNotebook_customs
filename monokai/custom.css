@@ -49,18 +49,18 @@ div.navbar-inner.navbar-nobg {
 /* Fading in the menubar */
 div#menubar-container {
     height: 8px;
-    -webkit-transition: height 1s ease;
-    -moz-transition   : height 1s ease;
-    -o-transition     : height 1s ease;
-    -ms-transition    : height 1s ease;
-    transition        : height 1s ease;
     width: 100%;
     opacity: 0;
-    -webkit-transition: opacity 1s ease;
-    -moz-transition   : opacity 1s ease;
-    -o-transition     : opacity 1s ease;
-    -ms-transition    : opacity 1s ease;
-    transition        : opacity 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition   : all 1s ease;
+    -o-transition     : all 1s ease;
+    -ms-transition    : all 1s ease;
+    transition        : all 1s ease;
+/*    -webkit-transition: height 1s ease-out;
+    -moz-transition   : height 1s ease-out;
+    -o-transition     : height 1s ease-out;
+    -ms-transition    : height 1s ease-out;
+    transition        : height 1s ease-out;*/
 }
 div#menubar-container:hover {
     height: 80px;
