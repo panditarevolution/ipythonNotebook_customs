@@ -1,0 +1,178 @@
+body {
+    font-family: Century Gothic, sans;
+}
+
+
+/* Hiding the ipython log */
+div#ipython_notebook {
+    display: none;
+}
+
+div#header {
+    background-color:		 #222222;
+    /* color: #f92672; */
+    color: #FFFFFF;
+    height: 3em;
+    border: 0px;
+}
+
+/* Formatting Notebook Name */
+span#notebook_name.ui-state-hover {
+    color: #ffffff;
+    /* background: #f92672; */
+    background: #f92672; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f92672 0%, #f2417c 44%, #f92672 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f92672), color-stop(44%,#f2417c), color-stop(100%,#f92672)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #f92672 0%,#f2417c 44%,#f92672 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #f92672 0%,#f2417c 44%,#f92672 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #f92672 0%,#f2417c 44%,#f92672 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #f92672 0%,#f2417c 44%,#f92672 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f92672', endColorstr='#f92672',GradientType=0 ); /* IE6-9 */    
+}
+
+
+/* Formatting code in markdown cells */
+div.rendered_html code {
+    font-style: italic;
+    font-weight: bold;
+    color: #8C6900;
+    /* background: #8A8D7A; color: #1D1D10; */
+}
+
+
+div.navbar-inner.navbar-nobg {
+    border: 0px;
+}
+
+
+
+/* Fading in the menubar */
+div#menubar-container {
+    height: 8px;
+    -webkit-transition: height 1s ease-out;
+    -moz-transition   : height 1s ease-out;
+    -o-transition     : height 1s ease-out;
+    -ms-transition    : height 1s ease-out;
+    transition        : height 1s ease-out;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: height 1s ease;
+    -moz-transition   : height 1s ease;
+    -o-transition     : height 1s ease;
+    -ms-transition    : height 1s ease;
+    transition        : height 1s ease;
+}
+div#menubar-container:hover {
+    height: 80px;
+    /* overflow:visible; */
+    opacity: 1;
+}
+ul.dropdown-menu {    
+    overflow: visible;
+    position: absolute;
+}
+
+div#notebook_panel {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Monokai */
+div.CodeMirror-lines {
+/*     background-color: #222222;
+    color: white; */
+    border: 0px;
+    /* padding-top: 1em; */
+    padding-bottom: 1em;
+}
+
+/* Based on Sublime Text's Monokai theme */
+.cm-s-ipython {background: #272822; color: #f8f8f2;}
+.cm-s-ipython div.CodeMirror-selected {background: #49483E !important;}
+.cm-s-ipython .CodeMirror-gutter {background: #272822; border-right: 0px;}
+.cm-s-ipython .CodeMirror-gutter-text {color: #d0d0d0;}
+.cm-s-ipython .CodeMirror-cursor {border-left: 1px solid #f8f8f0 !important;}
+.cm-s-ipython span.cm-comment {color: #75715e;}
+.cm-s-ipython span.cm-atom {color: #ae81ff;}
+.cm-s-ipython span.cm-number {color: #ae81ff;}
+.cm-s-ipython span.cm-property, .cm-s-ipython span.cm-attribute {color: #a6e22e;}
+.cm-s-ipython span.cm-keyword {color: #f92672;}
+.cm-s-ipython span.cm-string {color: #e6db74;}
+.cm-s-ipython span.cm-variable {color: #a6e22e;}
+.cm-s-ipython span.cm-variable-2 {color: #9effff;}
+.cm-s-ipython span.cm-def {color: #fd971f;}
+.cm-s-ipython span.cm-error {background: #f92672; color: #f8f8f0;}
+.cm-s-ipython span.cm-bracket {color: #f8f8f2;}
+.cm-s-ipython span.cm-tag {color: #f92672;}
+.cm-s-ipython span.cm-link {color: #ae81ff;}
+.cm-s-ipython .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+
+/* No border for selected cells */
+div.cell.selected {
+    border: 0px;
+}
+
+/*Input and output cells formatting*/
+div.prompt.input_prompt, div.prompt.output_prompt {
+    font-family: Consolas;
+    color: #575748;
+    background-color: #CCCCCC;
+    border: 0px;
+    width: 6.5em;
+}
+
+
+div.prompt.output_prompt {
+    padding-top: 1em;
+    margin: 8px; /*This is for getting the box-shadow property of the parent to display properly;*/
+}
+
+div.prompt {
+    width: 6.5em;
+}
+
+
+
+div.input_area {
+    border: 0px;
+    margin-bottom: 0;
+}
+
+div.out_prompt_overlay.prompt {
+    width: 1em;
+    border: 0px;
+}
+
+div.out_prompt_overlay.prompt:hover {
+    border: 0px;
+    background-color: #f92672;
+    box-shadow: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+div.output_subarea.output_text.output_stream.output_stdout,div.output_subarea.output_text {
+    margin-left: 0em;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    margin-top: 8px; /*This is for getting the box-shadow property of the parent to display properly;*/
+}
+
+div.output_wrapper {
+    background-color: #CCCCCC;
+    margin-bottom: 2em;
+    margin-top: 0;
+}
+
+div.output.vbox {
+    box-shadow:inset 0 0 8px #4d4d4d;   /* Check the output prompt settings when changing this*/
+}
+
+
