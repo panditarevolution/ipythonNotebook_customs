@@ -50,12 +50,13 @@ div.navbar-inner.navbar-nobg {
 div#menubar-container {
     height: 8px;
     width: 100%;
-    opacity: 0;
+    opacity: 1;
     -webkit-transition: all 1s ease;
     -moz-transition   : all 1s ease;
     -o-transition     : all 1s ease;
     -ms-transition    : all 1s ease;
     transition        : all 1s ease;
+    overflow: hidden;
 /*    -webkit-transition: height 1s ease-out;
     -moz-transition   : height 1s ease-out;
     -o-transition     : height 1s ease-out;
