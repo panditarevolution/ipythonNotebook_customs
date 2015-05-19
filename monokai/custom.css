@@ -14,6 +14,44 @@ div#header {
     color: #FFFFFF;
     height: 3em;
     border: 0px;
+    /* brute force fix to avoid the element going over the browser scrollbars*/
+    margin-right: 16px;
+}
+
+
+/* Moving the notebook application down so that the header doesn't cover it*/
+div#notebook {
+    padding-top: 7em;
+}
+
+
+div#menubar-container {
+    background-color: #222222;
+    width: 100%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: 0;
+}
+
+
+/* 
+I don't know what the purpose of this div is..... but it creates a small gap
+Setting the height to 0 in firebug works perfectly. Though the below somehow
+Gets overridden by something.... 
+*/
+div#header.header-bar{
+    display: none;
+    position: absolute;
+    height: 0px;
+    margin: 0px;
+}
+
+/*
+Making the notebook app a little wider to fit the browser when in half-screen
+mode.
+*/
+div#notebook-container {
+    width: 900px;
 }
 
 /* Formatting Notebook Name */
@@ -27,7 +65,7 @@ span#notebook_name.ui-state-hover {
     background: -o-linear-gradient(top,  #f92672 0%,#f2417c 44%,#f92672 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top,  #f92672 0%,#f2417c 44%,#f92672 100%); /* IE10+ */
     background: linear-gradient(to bottom,  #f92672 0%,#f2417c 44%,#f92672 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f92672', endColorstr='#f92672',GradientType=0 ); /* IE6-9 */    
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f92672', endColorstr='#f92672',GradientType=0 ); /* IE6-9 */
 }
 
 
@@ -43,42 +81,6 @@ div.rendered_html code {
 div.navbar-inner.navbar-nobg {
     border: 0px;
 }
-
-
-
-/* Fading in the menubar */
-div#menubar-container {
-    height: 8px;
-    width: 100%;
-    opacity: 1;
-    -webkit-transition: all 1s ease;
-    -moz-transition   : all 1s ease;
-    -o-transition     : all 1s ease;
-    -ms-transition    : all 1s ease;
-    transition        : all 1s ease;
-    overflow: hidden;
-/*    -webkit-transition: height 1s ease-out;
-    -moz-transition   : height 1s ease-out;
-    -o-transition     : height 1s ease-out;
-    -ms-transition    : height 1s ease-out;
-    transition        : height 1s ease-out;*/
-}
-div#menubar-container:hover {
-    height: 80px;
-    /* overflow:visible; */
-    opacity: 1;
-}
-ul.dropdown-menu {    
-    overflow: visible;
-    position: absolute;
-}
-
-div#notebook_panel {
-    position:absolute;
-    width: 100%;
-    height: 100%;
-}
-
 
 
 /* Monokai */
@@ -119,7 +121,7 @@ div.cell.selected {
     border: 0px;
 }
 
-/*Input and output cells formatting*/
+/* Input and output cells formatting */
 div.prompt.input_prompt, div.prompt.output_prompt {
     font-family: Consolas;
     color: #575748;
@@ -128,14 +130,21 @@ div.prompt.input_prompt, div.prompt.output_prompt {
     width: 6.5em;
 }
 
+div.CodeMirror-lines {
+    font-family: "Ubuntu Mono";
+    font-size: 16px;
+}
+
 
 div.prompt.output_prompt {
     padding-top: 1em;
     margin: 8px; /*This is for getting the box-shadow property of the parent to display properly;*/
 }
 
+
 div.prompt {
     width: 6.5em;
+    min-width: 98px;
 }
 
 
@@ -146,7 +155,7 @@ div.input_area {
 }
 
 div.out_prompt_overlay.prompt {
-    width: 1em;
+    width: 98px;
     border: 0px;
 }
 
@@ -177,3 +186,19 @@ div.output.vbox {
 }
 
 
+div.cell.selected {
+    border-radius: 0px;
+}
+
+div.cell.unselected {
+    border-radius: 0px;
+    border: none;
+}
+
+div.cell.text_cell div.prompt {
+    display: none;
+}
+
+div.prompt.output_prompt {
+    background: transparent;
+}
