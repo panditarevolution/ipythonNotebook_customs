@@ -3,7 +3,6 @@ body {
 }
 
 
-
 /* Hiding the ipython log */
 div#ipython_notebook {
     display: none;
