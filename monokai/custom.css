@@ -134,9 +134,20 @@ div.CodeMirror-lines {
 }
 
 
-/* No border for selected cells */
+/* Border formatting for cells */
 div.cell.selected {
-    border: 0px;
+    border: none;
+    /* pink border */
+    /*border-left: 10px solid #f92672;*/
+    /* light grey border */
+    border-left: 10px solid #DDD;
+    border-radius: 0px;
+}
+
+div.cell.unselected {
+    border: none;
+    border-left: 10px solid #FFF;
+    border-radius: 0px;
 }
 
 /* Input and output cells formatting */
@@ -206,14 +217,7 @@ div.output.vbox {
 }
 
 
-div.cell.selected {
-    border-radius: 0px;
-}
 
-div.cell.unselected {
-    border-radius: 0px;
-    border: none;
-}
 
 div.cell.text_cell div.prompt {
     display: none;
